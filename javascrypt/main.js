@@ -6,7 +6,7 @@ let numeroElegido;
 
 let intentos = 0;
 
-
+// Función de entrada del usuario
 function adivinarNumero() {
     let entrada = prompt(`Adivina el número secreto (entre 1 y ' + ${NUMERO_MAXIMO}):`);
     return parseInt(entrada);
@@ -16,6 +16,8 @@ alert ("Comencemos a jugar!!");
 console.log("Adivina el número secreto para ganar el premio, entre 1 y", NUMERO_MAXIMO);
 
 
+
+//Función principal del juego
 while (true) {
     numeroElegido = adivinarNumero();
     intentos++;
@@ -43,7 +45,7 @@ for (let i = 1; i <= intentos; i++) {
     console.log("Intento número: " + i);
 }   
 
-
+//Reinicio del juego
 let jugarDeNuevo;
 do {
     jugarDeNuevo = prompt("¿Quieres jugar de nuevo? (SI/NO):").toUpperCase();
